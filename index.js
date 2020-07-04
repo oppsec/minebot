@@ -17,7 +17,6 @@ const bot = mineflayer.createBot({
     username: server.info.account,
 
     // Bot
-    gamemode: client.info.mode,
     ping: client.info.ping,
     respawn: client.info.respawn,
 
@@ -39,11 +38,37 @@ bot.on('chat', function (username, message) {
     if (username === bot.username) return;
     console.log(`${username} | ${message}`)
 
-    switch (message) {
-        case `${p}search`:
-            search() // Search for blocks
-            break
+    if (message.startsWith(`${p}search`)) {
+        const searchBlock = message.split(' ')[1]
 
+        if (mcData.blocksByName[searchBlock] === undefined) {
+            bot.chat(`Not found > ${searchBlock}`)
+            return
+        }
+
+        const ids = [mcData.blocksByName[searchBlock].id]
+        const blocks = bot.findBlocks({ matching: ids, maxDistance: 128, minCount: 1 })
+        bot.chat(`Found ${blocks.length} ${searchBlock} on a 128 blocks region`)
+        bot.chat(`Localization: ${blocks}`)
+    }
+
+    if (message.startsWith(`${p}come`)) {
+        const defaultMove = new Movements(bot, mcData)
+
+        const target = bot.players[username] ? bot.players[username].entity : null
+        if (message === '!come')
+            if (!target) {
+                bot.chat(`[x] - I dont can see you ${username}`)
+                return
+            }
+
+        const p = target.position
+        bot.pathfinder.setMovements(defaultMove)
+        bot.pathfinder.setGoal(new GoalNear(p.x, p.y, p.z, 1))
+        bot.chat('[!] Walking...')
+    }
+
+    switch (message) {
         case `${p}dev`:
             developer() // Say bot developer
             break
@@ -59,27 +84,8 @@ bot.on('chat', function (username, message) {
         case `${p}stopjump`: // Stop jumping
             stopjump()
             break
-
-        case `${p}come`:
-            comeOn()
-            break
     }
 });
-
-// Commands
-function search(message) {
-    const searchBlock = message.split(' ')[1]
-
-    if (mcData.blocksByName[searchBlock] === undefined) {
-        bot.chat(`Not found > ${searchBlock}`)
-        return
-    }
-
-    const ids = [mcData.blocksByName[searchBlock].id]
-    const blocks = bot.findBlocks({ matching: ids, maxDistance: 128, minCount: 1 })
-    bot.chat(`Found ${blocks.length} ${searchBlock} on a 128 blocks region`)
-    bot.chat(`Localization: ${blocks}`)
-}
 
 function developer() {
     bot.chat('Developer: dsm')
@@ -101,33 +107,6 @@ function stopjump() {
     bot.setControlState('jump', false)
     bot.chat('[!] Stop jumping')
 }
-
-function comeOn(username, message) {
-    if (username == bot.username) return;
-    const defaultMove = new Movements(bot, mcData)
-
-    const target = bot.players[username] ? bot.players[username].entity : null
-    if (message === '!come')
-        if (!target) {
-            bot.chat(`[x] - I dont can see you ${username}`)
-            return
-        }
-
-    const p = target.position
-    bot.pathfinder.setMovements(defaultMove)
-    bot.pathfinder.setGoal(new GoalNear(p.x, p.y, p.z, 1))
-    bot.chat('[!] Walking...')
-
-}
-
-function itemInfo(item) {
-    if (item) {
-        return `${item.name} ${item.count}`
-    } else {
-        return "I don't have any item"
-    }
-}
-
 
 bot.once('spawn', () => {
     const client = bot.entity
