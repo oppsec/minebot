@@ -1,7 +1,5 @@
 # Charles
-
 ![charles](https://i.imgur.com/ZzMMs7q.jpg)
-
 > Charles is a minecraft bot made with mineflayer to execute simple commands
 
 # What is Charles?
@@ -12,7 +10,7 @@ Charles is a javascript minecraft bot to execute simple functions.
 1. For more easy download, click in the button "Clone or download" and click in "Download ZIP"
 2. If you want to use **SSH**, you can use "git clone git@github.com:dsmuix/charles.git"
 3. If you want to use **HTTPS**, you can use "git clone https://github.com/dsmuix/charles.git"
-<br><br><br>
+<br><br>
 
 # Set-up
 1. In the `server.json` file, you need to put the server informations to the bot connect.
@@ -24,7 +22,7 @@ Charles is a javascript minecraft bot to execute simple functions.
 
 3. Done, probaly the bot will connect on the server. 😃
 
-<br><br><br>
+<br><br>
 
 # Functions
 | !search   	| Search for a specific block 	| !search diamond_ore 	|
@@ -34,7 +32,11 @@ Charles is a javascript minecraft bot to execute simple functions.
 | !come     	| The bot will come to you    	|                     	|
 | !dev      	| Say the developer name      	|                     	|
 
-<br><br><br>
+<br><br>
 # Previews
 ### Search
 ![search](https://i.imgur.com/w7Fmh1l.png)
+<br><br>
+
+# Credits
+Mineflayer: https://github.com/PrismarineJS/mineflayer
