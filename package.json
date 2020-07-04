@@ -1,0 +1,23 @@
+{
+  "name": "minecraftbot",
+  "version": "1.0.0",
+  "description": "A nodejs minecraft bot made with node-minecraft-protocol",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [
+    "minecraft"
+  ],
+  "author": "dsm",
+  "license": "ISC",
+  "dependencies": {
+    "flying-squid": "^1.2.1",
+    "minecraft-data": "^2.61.0",
+    "minecraft-protocol": "^1.13.0",
+    "mineflayer": "^2.22.0",
+    "mineflayer-pathfinder": "^1.0.5",
+    "nodemon": "^2.0.4",
+    "vec3": "^0.1.5"
+  }
+}
