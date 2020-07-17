@@ -20,6 +20,7 @@ const bot = mineflayer.createBot({
     ping: client.info.ping,
     respawn: client.info.respawn,
 
+    // Settings
     displayName: { toString: Function },
     keepAlive: true,
     chatLengthLimit: 100,
@@ -28,16 +29,17 @@ const bot = mineflayer.createBot({
 
 const mcData = require('minecraft-data')(bot.version);
 
+// Bot prefix
 let p = "!";
 
 bot.loadPlugin(pathfinder)
 
-// process.stdout.write('\033c'); // Clear chat
-
+// Loading bot
 bot.on('chat', function (username, message) {
     if (username === bot.username) return;
     console.log(`${username} | ${message}`)
 
+    // Search block command
     if (message.startsWith(`${p}search`)) {
         const searchBlock = message.split(' ')[1]
 
@@ -52,6 +54,7 @@ bot.on('chat', function (username, message) {
         bot.chat(`Localization: ${blocks}`)
     }
 
+    // Come command
     if (message.startsWith(`${p}come`)) {
         const defaultMove = new Movements(bot, mcData)
 
@@ -81,7 +84,7 @@ bot.on('chat', function (username, message) {
             jump()
             break
 
-        case `${p}stopjump`: // Stop jumping
+        case `${p}stopjumping`: // Stop jumping
             stopjump()
             break
     }
@@ -103,7 +106,7 @@ function jump() {
     bot.chat('[!] Jumping')
 }
 
-function stopjump() {
+function stopjumping() {
     bot.setControlState('jump', false)
     bot.chat('[!] Stop jumping')
 }
@@ -114,6 +117,7 @@ bot.once('spawn', () => {
     bot.chat(`${client.position}`)
 })
 
+// Print server information
 bot.on('login', () => {
     console.log(`Logged in | ${server.info.account} \nServer | ${server.info.ip}:${server.info.port}\n`)
 })
