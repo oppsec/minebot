@@ -44,5 +44,6 @@ If you want to contribute with the project, you have two ways:
 1. Open a pull request with your changes
 2. Contact me on email: `dsm@tfwno.gf`
 
+<br><br>
 # Credits
 Mineflayer: https://github.com/PrismarineJS/mineflayer
