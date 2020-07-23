@@ -38,5 +38,11 @@ Charles is a javascript minecraft bot to execute simple functions.
 ![search](https://i.imgur.com/w7Fmh1l.png)
 <br><br>
 
+<br><br>
+# Contributing
+If you want to contribute with the project, you have two ways:
+1. Open a pull request with your changes
+2. Contact me on email: `dsm@tfwno.gf`
+
 # Credits
 Mineflayer: https://github.com/PrismarineJS/mineflayer
