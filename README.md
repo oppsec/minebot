@@ -4,19 +4,19 @@
 
 <br><br>
 
-# 🤔 What is Charles?
+## 🤔 What is Charles?
 Charles is a javascript minecraft bot made with [Mineflayer](https://github.com/PrismarineJS/mineflayer) librarie, the goal is execute simple commands.
 
 <br><br>
 
-# ☁️ Download
+## ☁️ Download
 1. For a more easy download, click in the button `Clone or download` and click in `Download ZIP`
 2. If you want to use **SSH**, you can use `git clone git@github.com:oppsec/charles.git`
 3. If you want to use **HTTPS**, you can use `git clone https://github.com/oppsec/charles.git` **(recommended)**
 
 <br><br>
 
-# ⚙️ Set-up
+## ⚙️ Set-up
 1. You need [Node](https://nodejs.org/en/) installed on your machine.
 
 2. On the `server.json` file, you need to put the server informations to the bot connect.
@@ -29,7 +29,7 @@ Charles is a javascript minecraft bot made with [Mineflayer](https://github.com/
 
 <br><br>
 
-# 🔨 Commands
+## 🔨 Commands
 | Command   	| Function                     	| Example              	|
 |-----------	|-----------------------------	|---------------------	|
 | !search   	| Search for a specific block 	| !search diamond_ore  	|
@@ -40,18 +40,18 @@ Charles is a javascript minecraft bot made with [Mineflayer](https://github.com/
 
 <br><br>
 
-# 👀 Previews
+## 👀 Previews
 ### Search command
 ![search](https://i.imgur.com/w7Fmh1l.png)
 
 <br><br>
 
-# 👋 Contributing
+## 👋 Contributing
 If you want to contribute with the project, you have two ways:
 1. Open a pull request with your changes
 2. Contact me on email: `dsm@tfwno.gf`
 
 <br><br>
 
-# 👏 Credits
+## 👏 Credits
 **Mineflayer**: https://github.com/PrismarineJS/mineflayer
