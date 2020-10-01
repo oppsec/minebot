@@ -23,9 +23,9 @@ Charles is a javascript minecraft bot made with [Mineflayer](https://github.com/
 - Localhost: `ip: localhost` | `port: ... (Open a LAN server)` | `version: ... (Minecraft server version)`
 - Online server: `username: yourminecraft@memail.com` | `password: youramazingpassword`
 
-2. After setting up the `server.json` file, type in your terminal `node index.js` or `node .` *(the terminal path needs to be the same of the folder)*
+3. After setting up the `server.json` file, type in your terminal `node index.js` or `node .` *(the terminal path needs to be the same of the folder)*
 
-3. Done, probably your bot will connect on the server. 😃
+4. Done, probably your bot will connect on the server. 😃
 
 <br><br>
 
