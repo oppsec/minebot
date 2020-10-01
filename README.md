@@ -30,8 +30,9 @@ Charles is a javascript minecraft bot made with [Mineflayer](https://github.com/
 <br><br>
 
 # 🔨 Commands
-| !search   	| Search for a specific block 	| !search diamond_ore 	|
+| Command   	| Function                     	| Example              	|
 |-----------	|-----------------------------	|---------------------	|
+| !searc     	| Search for a specific block 	| !search diamond_ore  	|
 | !jump     	| Simple jump function        	|                     	|
 | !stopjump 	| Stop jump function          	|                     	|
 | !come     	| The bot will come to you    	|                     	|
