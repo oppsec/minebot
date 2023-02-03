@@ -17,7 +17,7 @@
     "minecraft-protocol": "^1.13.0",
     "mineflayer": "^2.22.0",
     "mineflayer-pathfinder": "^1.0.5",
-    "nodemon": "^2.0.4",
+    "nodemon": "^2.0.20",
     "vec3": "^0.1.5"
   }
 }
