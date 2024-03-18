@@ -1,18 +1,18 @@
-# 🤖 Charles
+# 🤖 minebot
 ![charles](https://i.imgur.com/ZzMMs7q.jpg)
-> Charles is a minecraft bot made with Mineflayer to execute simple commands
+> minebot is a minecraft bot made with Mineflayer to execute simple commands
 
 <br><br>
 
 ## 🤔 What is Charles?
-Charles is a javascript minecraft bot made with [Mineflayer](https://github.com/PrismarineJS/mineflayer) librarie, the goal is execute simple commands.
+minebot is a javascript minecraft bot made with [Mineflayer](https://github.com/PrismarineJS/mineflayer) librarie, the goal is execute simple commands.
 
 <br><br>
 
 ## ☁️ Download
 1. For a more easy download, click in the button `Clone or download` and click in `Download ZIP`
-2. If you want to use **SSH**, you can use `git clone git@github.com:oppsec/charles.git`
-3. If you want to use **HTTPS**, you can use `git clone https://github.com/oppsec/charles.git` **(recommended)**
+2. If you want to use **SSH**, you can use `git clone git@github.com:oppsec/minebot.git`
+3. If you want to use **HTTPS**, you can use `git clone https://github.com/oppsec/minebot.git` **(recommended)**
 
 <br><br>
 
@@ -49,7 +49,6 @@ Charles is a javascript minecraft bot made with [Mineflayer](https://github.com/
 ## 👋 Contributing
 If you want to contribute with the project, you have two ways:
 1. Open a pull request with your changes
-2. Contact me on email: `dsm@tfwno.gf`
 
 <br><br>
 
